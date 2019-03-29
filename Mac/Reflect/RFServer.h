@@ -48,7 +48,7 @@ typedef enum {
 - (void)serverDidStartBonjourService:(RFServer *)server;
 
 /**
- Tell the delegate that the server failed to start that isn't a bonjour related error.
+ Tell the delegate that the server failed to start, because of a non-bonjour related error.
  
  @param server The RFServer object that sent this.
  @param error The error that caused the failure.  The domain should be RFServerErrorDomain, with a given 
