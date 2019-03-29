@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D83AFCC224EC5CD0077A404 /* DEVELOPMENT_TEAM.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3D83AFCA224EC5CD0077A404 /* DEVELOPMENT_TEAM.xcconfig */; };
+		3D83AFCD224EC5CD0077A404 /* Shared.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3D83AFCB224EC5CD0077A404 /* Shared.xcconfig */; };
 		A15DDA701638DA1B002BFA5C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A15DDA6F1638DA1B002BFA5C /* SystemConfiguration.framework */; };
 		A1710DCE163263BE0085C9C8 /* RFConnectedService.m in Sources */ = {isa = PBXBuildFile; fileRef = A1710DCD163263BE0085C9C8 /* RFConnectedService.m */; };
 		A19236FE16338A850041BAD4 /* temp-icon-highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = A19236FA16338A850041BAD4 /* temp-icon-highlighted.png */; };
@@ -25,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D83AFCA224EC5CD0077A404 /* DEVELOPMENT_TEAM.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = DEVELOPMENT_TEAM.xcconfig; sourceTree = "<group>"; };
+		3D83AFCB224EC5CD0077A404 /* Shared.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Shared.xcconfig; sourceTree = "<group>"; };
 		A15DDA6F1638DA1B002BFA5C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		A1710DCC163263BE0085C9C8 /* RFConnectedService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFConnectedService.h; sourceTree = "<group>"; };
 		A1710DCD163263BE0085C9C8 /* RFConnectedService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFConnectedService.m; sourceTree = "<group>"; };
@@ -68,6 +72,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D83AFC9224EC5CD0077A404 /* Xcode-config */ = {
+			isa = PBXGroup;
+			children = (
+				3D83AFCA224EC5CD0077A404 /* DEVELOPMENT_TEAM.xcconfig */,
+				3D83AFCB224EC5CD0077A404 /* Shared.xcconfig */,
+			);
+			name = "Xcode-config";
+			path = "../Xcode-config";
+			sourceTree = "<group>";
+		};
 		A19236F716338A790041BAD4 /* resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +117,7 @@
 				A1E80410162CABA400630068 /* Reflect */,
 				A1E80409162CABA400630068 /* Frameworks */,
 				A1E80407162CABA400630068 /* Products */,
+				3D83AFC9224EC5CD0077A404 /* Xcode-config */,
 			);
 			sourceTree = "<group>";
 		};
@@ -203,6 +218,11 @@
 				CLASSPREFIX = RF;
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "Kyle Hickinson";
+				TargetAttributes = {
+					A1E80405162CABA400630068 = {
+						ProvisioningStyle = Automatic;
+					};
+				};
 			};
 			buildConfigurationList = A1E80400162CABA400630068 /* Build configuration list for PBXProject "Reflect" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -227,6 +247,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1E80415162CABA400630068 /* InfoPlist.strings in Resources */,
+				3D83AFCC224EC5CD0077A404 /* DEVELOPMENT_TEAM.xcconfig in Resources */,
+				3D83AFCD224EC5CD0077A404 /* Shared.xcconfig in Resources */,
 				A1E8041B162CABA400630068 /* Credits.rtf in Resources */,
 				A1E80421162CABA500630068 /* MainMenu.xib in Resources */,
 				A19236FE16338A850041BAD4 /* temp-icon-highlighted.png in Resources */,
@@ -284,6 +306,7 @@
 /* Begin XCBuildConfiguration section */
 		A1E80422162CABA500630068 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D83AFCB224EC5CD0077A404 /* Shared.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
@@ -314,6 +337,7 @@
 		};
 		A1E80423162CABA500630068 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D83AFCB224EC5CD0077A404 /* Shared.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
@@ -339,11 +363,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = Reflect/Reflect.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = FK9S39L3SK;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Reflect/Reflect-Prefix.pch";
 				INFOPLIST_FILE = "Reflect/Reflect-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -352,11 +380,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = Reflect/Reflect.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = FK9S39L3SK;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Reflect/Reflect-Prefix.pch";
 				INFOPLIST_FILE = "Reflect/Reflect-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
