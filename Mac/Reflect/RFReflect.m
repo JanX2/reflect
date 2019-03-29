@@ -31,6 +31,8 @@
 
 @implementation RFReflect
 
+@dynamic menu;
+
 - (id)init
 {
     if ((self = [super initWithFrame:NSMakeRect(0, 0, 28, 20)])) {
